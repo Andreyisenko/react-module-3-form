@@ -5,9 +5,11 @@ import SearchBar from "./SearchBar/SearchBar";
 import NewSearch from "./NewSearch/NewSearch";
 import LangSwitcher from "./NewSearch/LangSwitcher/LangSwitcher";
 import { useEffect, useState } from "react";
+import RadioSelected from "./RadioSelected/RadioSelected";
 
 function App() {
   const [stat, setStat] = useState("junior");
+  const [size, setSize] = useState("big");
   const handleLogin = (userData) => {
     console.log(userData);
   };
@@ -25,8 +27,9 @@ function App() {
       </h1>
       <div>
         <LoginForm onLogin={handleLogin} />
-        <SearchBar />
-        <LangSwitcher value={stat} onSelected={setStat} />
+        {/* <SearchBar /> */}
+        <RadioSelected radioChange={setSize} value={size} />
+        {/* <LangSwitcher value={stat} onSelected={setStat} /> */}
         {/* <NewSearch /> */}
       </div>
     </div>
