@@ -1,0 +1,46 @@
+body {
+  background-color: rgb(185, 206, 221);
+}
+.wrapper {
+  margin: 20px;
+  text-align: center;
+  color: rgb(6, 22, 199);
+}
+
+.forma {
+  width: 500px;
+  display: flex;
+  flex-direction: column;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: rgb(168, 185, 223);
+  gap: 20px;
+  align-items: center;
+  border-radius: 10px;
+  border: solid 2px black;
+  box-shadow: 10px 10px 20px blue;
+}
+
+.inp {
+  width: 80%;
+  width: 300px;
+  height: 30px;
+  border-radius: 10px;
+  border: solid 2px black;
+}
+.labl {
+  display: flex;
+  font-size: 22px;
+  gap: 20px;
+}
+.par {
+  width: 100px;
+}
+
+.btn {
+  width: 80px;
+  height: 40px;
+  border-radius: 8px;
+  background-color: blue;
+  color: beige;
+}
