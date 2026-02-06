@@ -6,10 +6,12 @@ import NewSearch from "./NewSearch/NewSearch";
 import LangSwitcher from "./NewSearch/LangSwitcher/LangSwitcher";
 import { useEffect, useState } from "react";
 import RadioSelected from "./RadioSelected/RadioSelected";
+import Checkbox from "./Checkbox/Checkbox";
 
 function App() {
   const [stat, setStat] = useState("junior");
   const [size, setSize] = useState("big");
+  const [hasAccepted, setHasAccepted] = useState(false);
   const handleLogin = (userData) => {
     console.log(userData);
   };
@@ -29,8 +31,9 @@ function App() {
         <LoginForm onLogin={handleLogin} />
         {/* <SearchBar /> */}
         <RadioSelected radioChange={setSize} value={size} />
-        {/* <LangSwitcher value={stat} onSelected={setStat} /> */}
+        <LangSwitcher value={stat} onSelected={setStat} />
         {/* <NewSearch /> */}
+        <Checkbox hasAccepted={hasAccepted} onChecked={setHasAccepted} />
       </div>
     </div>
   );
